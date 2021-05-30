@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/asosiy_page.dart';
 import 'package:untitled/home_page.dart';
+
+
+
+
 
 void main() {
   runApp(MyApp());
@@ -15,7 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: AsosiyPage(),
+      routes: {
+        HomePage.id: (context) => HomePage(index: 0,),
+        AsosiyPage.id: (context) => AsosiyPage(),
+      },
     );
   }
 }
